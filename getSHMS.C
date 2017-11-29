@@ -1,19 +1,10 @@
 #include "SHMSMagnets.h"
 
-/**********************************************************
- * Run in ROOT as:
- * 
- *
- *
- *
- *
- *********************************************************/
-
 ////////////////////
 // global variables:
 ////////////////////
 const double tol = 1E-5;
-int debug = 0;//1;
+int debug = 1;
 
 //////////////////////////////////////
 // input the desired momentum in [GeV]
@@ -33,6 +24,8 @@ int main(int argc, char *argv[]){
   static double (*cpratio[5])(double a, double b) = {calcPratioHB,calcPratioQ1,calcPratioQ2,calcPratioQ3,calcPratioDip};
   static double (*bratio[5])(double a) = {calcBetaRatioHB,calcBetaRatioQ1,calcBetaRatioQ2,calcBetaRatioQ3,calcBetaRatioDip};
   static double (*lratio[5])(double a) = {calcLeffRatioHB,calcLeffRatioQ1,calcLeffRatioQ2,calcLeffRatioQ3,calcLeffRatioDip};
+
+    static double (*error[5])(double a) = {calcErrorHB,calcErrorQ1,calcErrorQ2,calcErrorQ3,calcErrorDip};
   
   for (int kk=0; kk<5; kk++){
   
@@ -53,9 +46,10 @@ int main(int argc, char *argv[]){
       cout<<"\tRecommended Iset: "<<I_iter[kk]<<" [A], from initial guess: "<<I_linear[kk]<<" [A]."<<endl;
       cout<<"\tbeta ratio: "<<bratio[kk](I_iter[kk])<<" leff ratio: "<<lratio[kk](I_iter[kk])<<endl;
       cout<<"\tResulting difference from nominal: "<<eta[kk]<<endl;
+      cout<<"\tUncertainty: +/-"<<error[kk](I_iter[kk])<<"[%]"<<endl;
     }
     else{
-      cout<<"\tRecommended Iset: "<<I_iter[kk]<<" [A], from initial guess: "<<I_linear[kk]<<" [A]."<<endl;
+      cout<<"\tRecommended Iset: "<<I_iter[kk]<<" [A]."<<endl;
     }
   }
 

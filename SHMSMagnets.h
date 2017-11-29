@@ -8,12 +8,8 @@ using namespace std;
 /**************************************************
  * If anything is changed, increase version number 
  * and commit to github. 
- * This contains the magnet non-linearity effects
- * as found from data taken during 2017 prior to beam.
- *
- * Holly Szumila-Vance
- * hszumila@jlab.org
  * Experts only!
+ * Errors are estimated from data!
  ***************************************************/
 
 // version number per magnet:
@@ -29,7 +25,6 @@ const int version[nmag] = {version_hb, version_q1, version_q2, version_q3, versi
 double getVersion(int ii){
   return version[ii];
 }
-
 
 /////////////////////////////
 // variables for each magnet:
@@ -106,6 +101,11 @@ double calcPratioHB(double P, double I_iter){
   return ratio-1;
 }
 
+//input units [A], return units [%]
+double calcErrorHB(double I_iter){
+  return (10.0*(1.0-calcLeffRatioHB(I_iter))) + 0.1;
+}
+
 ////////////////
 //Q1 parameters:
 ////////////////
@@ -144,6 +144,11 @@ double calcPratioQ1(double P, double I_iter){
   double ratio = (I_iter/I_linear)*(betaRatio)*(leffRatio);
   
   return ratio-1;
+}
+
+//input units [A], return units [%]
+double calcErrorQ1(double I_iter){
+  return (100.0*(1.0-calcLeffRatioQ1(I_iter))) + 0.1;
 }
 
 ////////////////
@@ -186,6 +191,10 @@ double calcPratioQ2(double P, double I_iter){
   return ratio-1;
 }
 
+//input units [A], return units [%]
+double calcErrorQ2(double I_iter){
+  return (100.0*(1.0-calcBetaRatioQ2(I_iter))) + 0.25;
+}
 
 ////////////////
 //Q3 parameters:
@@ -227,6 +236,10 @@ double calcPratioQ3(double P, double I_iter){
   return ratio-1;
 }
 
+//input units [A], return units [%]
+double calcErrorQ3(double I_iter){
+  return (10.0*(1.0-calcBetaRatioQ3(I_iter))) + 0.1;
+}
 ////////////////////
 //Dipole parameters:
 ////////////////////
@@ -265,4 +278,9 @@ double calcPratioDip(double P, double I_iter){
   double ratio = (I_iter/I_linear)*(betaRatio)*(leffRatio);
   
   return ratio-1;
+}
+
+//input units [A], return units [%]
+double calcErrorDip(double I_iter){
+  return (10.0*(1.0-calcBetaRatioDip(I_iter)))/2.0 + 0.01;
 }
