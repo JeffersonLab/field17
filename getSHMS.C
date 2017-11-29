@@ -49,7 +49,7 @@ int main(int argc, char *argv[]){
       cout<<"\tUncertainty: +/-"<<error[kk](I_iter[kk])<<"[%]"<<endl;
     }
     else{
-      cout<<"\tRecommended Iset: "<<I_iter[kk]<<" [A]."<<endl;
+      cout<<"\tRecommended Iset: "<<I_iter[kk]<<" [A], from initial guess: "<<I_linear[kk]<<" [A]."<<endl;
     }
   }
 
