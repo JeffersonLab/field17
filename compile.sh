@@ -16,9 +16,9 @@ then
 fi
 
 #OSX needs c++:
-compiler=c++
+#compiler=c++
 #compiler=gcc
-#compiler=g++
+compiler=g++
 #compiler=gfortran
 
 opts='-W -Wall '
@@ -34,7 +34,7 @@ cmd="$compiler
      $opts
      $clopts
      $rootflags
-     -I/Applications/root/build
+     -I/apps/root/PRO/root
      -o $exe $source"
 
 echo $cmd

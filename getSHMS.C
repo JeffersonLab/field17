@@ -4,7 +4,7 @@
 // global variables:
 ////////////////////
 const double tol = 1E-5;
-int debug = 1;
+int debug = 0;
 
 //////////////////////////////////////
 // input the desired momentum in [GeV]
