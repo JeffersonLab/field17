@@ -164,7 +164,8 @@ double calcLinearQ2(double P){
 // input units [A], output units [unitless]
 double calcBetaRatioQ2(double I_iter){
 
-  double beta = (-4.2749E-19*pow(I_iter,4) + 4.46166E-15*pow(I_iter,3) - 1.26893E-11*pow(I_iter,2) - 1.80224E-9*I_iter + 0.00944297);
+  //double beta = (-4.2749E-19*pow(I_iter,4) + 4.46166E-15*pow(I_iter,3) - 1.26893E-11*pow(I_iter,2) - 1.80224E-9*I_iter + 0.00944297);
+  double beta = betaG[2];
 
   return beta/betaG[2];
 }

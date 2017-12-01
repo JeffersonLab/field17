@@ -43,13 +43,13 @@ int main(int argc, char *argv[]){
 
     if (debug == 1){
       cout<<"\tRequested energy:\t"<<P<<" [GeV]"<<endl;
-      cout<<"\tRecommended Iset: "<<I_iter[kk]<<" [A], from initial guess: "<<I_linear[kk]<<" [A]."<<endl;
+      cout<<"\tRecommended Iset: "<<I_iter[kk]<<" [A], from linear approx: "<<I_linear[kk]<<" [A]."<<endl;
       cout<<"\tbeta ratio: "<<bratio[kk](I_iter[kk])<<" leff ratio: "<<lratio[kk](I_iter[kk])<<endl;
       cout<<"\tResulting difference from nominal: "<<eta[kk]<<endl;
       cout<<"\tUncertainty: +/-"<<error[kk](I_iter[kk])<<"[%]"<<endl;
     }
     else{
-      cout<<"\tRecommended Iset: "<<I_iter[kk]<<" [A], from initial guess: "<<I_linear[kk]<<" [A]."<<endl;
+      cout<<"\tRecommended Iset: "<<I_iter[kk]<<" [A], from linear approx: "<<I_linear[kk]<<" [A]."<<endl;
     }
   }
 
