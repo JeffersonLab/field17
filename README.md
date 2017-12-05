@@ -5,22 +5,22 @@ Author: **Holly Szumila-Vance**, hszumila@jlab.org
 ## Compiling
 The program must be compiled and the script "compile.sh" may need to be modified to point to the ROOT location on the computer this is used on.
 
-*To compile SHMS code:
+* To compile SHMS code:
 ```
 ./compile.sh getSHMS.C
 ```
-*To compile HMS dipole code:
+* To compile HMS dipole code:
 ```
 ./compile.sh getHMS.C
 ```
 
 ## Running
 
-*To get HMS magnet settings:
+* To get HMS magnet settings:
 ```
 ./getSHMS P
 ```
-*To get HMS dipole setting:
+* To get HMS dipole setting:
 ```
 ./getHMS P
 ```
