@@ -47,7 +47,7 @@ int main(int argc, char *argv[]){
       cout<<"\tResulting difference from nominal: "<<eta<<endl;
       cout<<"\tUncertainty: +/-"<<calcErrorDip(I_iter)<<"[%]"<<endl;
     }
-    cout<<"\tRecommended NMR B: "<<Biter<<" [A], from initial guess: "<<Blin/10<<" [A]."<<endl;
+    cout<<"\tRecommended NMR B: "<<Biter<<" [T]"<<endl;
     cout<<"\tCorresponding Iset: "<<I_iter<<" [A], from linear approx: "<<I_linear<<" [A]."<<endl;
 
 
