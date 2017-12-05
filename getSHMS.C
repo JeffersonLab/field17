@@ -29,14 +29,13 @@ int main(int argc, char *argv[]){
   
   for (int kk=0; kk<5; kk++){
   
-    while (abs(eta[kk])>tol){
+    while (fabs(eta[kk])>tol){
       eta[kk] = cpratio[kk](P, I_iter[kk]);
-      //cout<<"\t"<<ii<<"\t"<<eta<<"\t"<<Iiter<<"\t"<<beta(Iiter)<<endl;
-      if (eta[kk] > 0) {I_iter[kk] = I_iter[kk]*(1-abs(eta[kk])/2.0);}
-      else {I_iter[kk] = I_iter[kk]*(1+abs(eta[kk])/2.0);}
+      if (eta[kk] > 0) {I_iter[kk] = I_iter[kk]*(1-fabs(eta[kk])/2.0);}
+      else {I_iter[kk] = I_iter[kk]*(1+fabs(eta[kk])/2.0);}
       
       ii[kk]++;
-      if (abs(ii[kk]) > 100) {break;}
+      if (ii[kk] > 100) {break;}
     }
 
     cout<<"Magnet:\t"<<magnets[kk]<<"\tVersion:\t"<<getVersion(kk)<<endl;
