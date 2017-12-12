@@ -12,7 +12,7 @@ int debug = 0;
 int main(int argc, char *argv[]){
 
   double P = atof(argv[1]);
- 
+  P = abs(P);
   double eta = 10000;
   int ii = 0;
   double I_iter = calcLinearDip(P);
