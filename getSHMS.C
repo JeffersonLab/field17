@@ -18,6 +18,7 @@ int main(int argc, char *argv[]){
   int ii[5] = {0, 0, 0, 0, 0};
   double I_iter[5] = {calcLinearHB(P), calcLinearQ1(P), calcLinearQ2(P), calcLinearQ3(P), calcLinearDip(P)};
   double I_linear[5] = {calcLinearHB(P), calcLinearQ1(P), calcLinearQ2(P), calcLinearQ3(P), calcLinearDip(P)};
+  double I_max[5] = {3600, 2400, 3660, 2480, 3200};
 
   char const *magnets[5] = {"HB","Q1","Q2","Q3","Dipole"};
 
@@ -25,8 +26,11 @@ int main(int argc, char *argv[]){
   static double (*bratio[5])(double a) = {calcBetaRatioHB,calcBetaRatioQ1,calcBetaRatioQ2,calcBetaRatioQ3,calcBetaRatioDip};
   static double (*lratio[5])(double a) = {calcLeffRatioHB,calcLeffRatioQ1,calcLeffRatioQ2,calcLeffRatioQ3,calcLeffRatioDip};
 
-    static double (*error[5])(double a) = {calcErrorHB,calcErrorQ1,calcErrorQ2,calcErrorQ3,calcErrorDip};
-  
+  static double (*error[5])(double a) = {calcErrorHB,calcErrorQ1,calcErrorQ2,calcErrorQ3,calcErrorDip};
+  cout<<"~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"<<endl;
+  cout<<"The linear approx excludes saturation effects and is just for reference."<<endl;
+  cout<<"If increasing momentum, go to ramp current first, then decrease to Iset!"<<endl;
+
   for (int kk=0; kk<5; kk++){
   
     while (fabs(eta[kk])>tol){
@@ -40,6 +44,10 @@ int main(int argc, char *argv[]){
 
     cout<<"Magnet:\t"<<magnets[kk]<<"\tVersion:\t"<<getVersion(kk)<<endl;
 
+    double I_ramp = I_iter[kk]+300;
+    if (I_ramp > I_max[kk]){I_ramp = I_max[kk];}
+    if (kk==1 && I_iter[kk]<1200){I_ramp = 1500;}
+
     if (debug == 1){
       cout<<"\tRequested energy:\t"<<P<<" [GeV]"<<endl;
       cout<<"\tRecommended Iset: "<<I_iter[kk]<<" [A], from linear approx: "<<I_linear[kk]<<" [A]."<<endl;
@@ -48,9 +56,10 @@ int main(int argc, char *argv[]){
       cout<<"\tUncertainty: +/-"<<error[kk](I_iter[kk])<<"[%]"<<endl;
     }
     else{
-      cout<<"\tRecommended Iset: "<<I_iter[kk]<<" [A], from linear approx: "<<I_linear[kk]<<" [A]."<<endl;
+      cout<<"\tIset: "<<I_iter[kk]<<" [A]. Ramp current: "<<I_ramp<<" [A]. Linear approx (reference): "<<I_linear[kk]<<endl;
     }
   }
+  cout<<"~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"<<endl;
 
   return 0;
 

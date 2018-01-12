@@ -15,9 +15,9 @@ using namespace std;
 // version number per magnet:
 const int nmag = 5;
 int version_hb = 0;
-int version_q1 = 1;
-int version_q2 = 1;
-int version_q3 = 1;
+int version_q1 = 2;
+int version_q2 = 2;
+int version_q3 = 2;
 int version_dip = 0;
 
 const int version[nmag] = {version_hb, version_q1, version_q2, version_q3, version_dip};
@@ -37,17 +37,17 @@ double leffG_hb = 80.209; //units of [cm]
 
 //Q1:
 double betaG_q1 = 7.10342873019000065e-03; //units of [kG/A]
-double P0_q1 =  0.95*0.0049948; //units of [GeV/A]
+double P0_q1 =  0.97*0.0049948; //units of [GeV/A]
 double leffG_q1 = 1.863; //units of [m]
 
 //Q2:
 double betaG_q2 = 9.43647134013299999e-03; //units of [kG/A]
-double P0_q2 = 0.95*0.00300464; //units of [GeV/A]
+double P0_q2 = 0.96*0.00300464; //units of [GeV/A]
 double leffG_q2 = 1; //assume linear
 
 //Q3:
 double betaG_q3 = 9.72834595398900000e-03; //units of [kG/A]
-double P0_q3 = 0.95*0.004519309778; //units of [GeV/A]
+double P0_q3 = 0.97*0.004519309778; //units of [GeV/A]
 double leffG_q3 = 1; //assume linear
 
 //dipole:
