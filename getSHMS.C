@@ -28,8 +28,7 @@ int main(int argc, char *argv[]){
 
   static double (*error[5])(double a) = {calcErrorHB,calcErrorQ1,calcErrorQ2,calcErrorQ3,calcErrorDip};
   cout<<"~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"<<endl;
-  cout<<"The linear approx excludes saturation effects and is just for reference."<<endl;
-  cout<<"If increasing momentum, go to ramp current first, then decrease to Iset!"<<endl;
+  cout<<"If increasing momentum, go to Minimum On Loop (MOL) current first, then to Iset!"<<endl;
 
   for (int kk=0; kk<5; kk++){
   
@@ -56,7 +55,8 @@ int main(int argc, char *argv[]){
       cout<<"\tUncertainty: +/-"<<error[kk](I_iter[kk])<<"[%]"<<endl;
     }
     else{
-      cout<<"\tIset: "<<I_iter[kk]<<" [A]. Ramp current: "<<I_ramp<<" [A]. Linear approx (reference): "<<I_linear[kk]<<endl;
+      cout<<"\tIset: "<<I_iter[kk]<<" [A]. MOL current: "<<I_ramp<<" [A]."<<endl;
+      cout<<" "<<endl;
     }
   }
   cout<<"~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"<<endl;
