@@ -40,7 +40,7 @@ int main(int argc, char *argv[]){
     }
 
   cout<<"Magnet:\t"<<magnet<<"\tVersion:\t"<<getVersion()<<endl;
-
+  cout<<"Set the HMS Dipole by NMR"<<endl;
     if (debug == 1){
       cout<<"\tRequested energy:\t"<<P<<" [GeV]"<<endl;
       cout<<"\tbeta ratio: "<<calcBetaRatioDip(I_iter)<<" leff ratio: "<<calcLeffRatioDip(I_iter)<<endl;
@@ -48,7 +48,7 @@ int main(int argc, char *argv[]){
       cout<<"\tUncertainty: +/-"<<calcErrorDip(I_iter)<<"[%]"<<endl;
     }
     cout<<"\tRecommended NMR B: "<<Biter<<" [T]"<<endl;
-    cout<<"\tCorresponding Iset: "<<I_iter<<" [A], from linear approx: "<<I_linear<<" [A]."<<endl;
+    cout<<"\tCorresponds to approx Iset: "<<I_iter<<" [A]."<<endl;
 
 
   return 0;
