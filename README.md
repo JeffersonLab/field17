@@ -36,5 +36,6 @@ There is a debug flag that can be set in the getSHMS.C and getHMS.C files if mor
 ## Version notes:
 Version 1: 
 Q1, Q2, Q3 at 1.05
+
 Version 2: 
 Q1 at 1.03, Q2 at 1.04, Q3 at 1.03
