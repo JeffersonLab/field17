@@ -31,3 +31,10 @@ where P is the desired momentum in [GeV]. This will return the current per magne
 SHMSMagnets.h contains all the parameterizations and magnet constants. HMSDipole.h contains all the parameterizations and magnet constants for the HMS dipole. If there is a change made, this should be done by an expert only, and the version number for a specific magnet constant should be incremented by +1 before committing to gitHub. 
 
 There is a debug flag that can be set in the getSHMS.C and getHMS.C files if more information is desired. 
+
+
+## Version notes:
+Version 1: 
+Q1, Q2, Q3 at 1.05
+Version 2: 
+Q1 at 1.03, Q2 at 1.04, Q3 at 1.03
