@@ -55,8 +55,14 @@ int main(int argc, char *argv[]){
       cout<<"\tUncertainty: +/-"<<error[kk](I_iter[kk])<<"[%]"<<endl;
     }
     else{
-      cout<<"\tIset: "<<I_iter[kk]<<" [A]. MOL current: "<<I_ramp<<" [A]."<<endl;
-      cout<<" "<<endl;
+      if (P<0.01){
+	cout<<"\tIset: "<<0.0<<" [A]. MOL current: "<<0.0<<" [A]."<<endl;
+	cout<<" "<<endl;
+      }
+      else{
+	cout<<"\tIset: "<<I_iter[kk]<<" [A]. MOL current: "<<I_ramp<<" [A]."<<endl;
+	cout<<" "<<endl;
+      }
     }
   }
   cout<<"~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"<<endl;

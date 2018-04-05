@@ -15,9 +15,9 @@ using namespace std;
 // version number per magnet:
 const int nmag = 5;
 int version_hb = 0;
-int version_q1 = 2;
+int version_q1 = 3;
 int version_q2 = 2;
-int version_q3 = 2;
+int version_q3 = 3;
 int version_dip = 0;
 
 const int version[nmag] = {version_hb, version_q1, version_q2, version_q3, version_dip};
@@ -119,7 +119,7 @@ double calcLinearQ1(double P){
 // input units [A], output units [unitless]
 double calcBetaRatioQ1(double I_iter){
 
-  double beta = (2.24863E-23*pow(I_iter,6) - 1.56067E-19*pow(I_iter,5) + 3.72383E-16*pow(I_iter,4) - 4.12478E-13*pow(I_iter,3) + 2.29043E-10*pow(I_iter,2) - 6.2683E-08*I_iter + 0.00711028);
+  double beta = betaG[1];//(2.24863E-23*pow(I_iter,6) - 1.56067E-19*pow(I_iter,5) + 3.72383E-16*pow(I_iter,4) - 4.12478E-13*pow(I_iter,3) + 2.29043E-10*pow(I_iter,2) - 6.2683E-08*I_iter + 0.00711028);
 
   return beta/betaG[1];
 }
@@ -127,7 +127,7 @@ double calcBetaRatioQ1(double I_iter){
 // input units [A], output units [unitless]
 double calcLeffRatioQ1(double I_iter){
 
-  double leff = leffG[1]* (1 + (I_iter>1220)*(4.60576E-12*pow(I_iter-1220,3)-1.00781E-8*pow(I_iter-1220,2)+7.17211E-7*(I_iter-1220)));
+  double leff = leffG[1];//leffG[1]* (1 + (I_iter>1220)*(4.60576E-12*pow(I_iter-1220,3)-1.00781E-8*pow(I_iter-1220,2)+7.17211E-7*(I_iter-1220)));
 
   return leff/leffG[1];
 }
@@ -210,7 +210,7 @@ double calcLinearQ3(double P){
 // input units [A], output units [unitless]
 double calcBetaRatioQ3(double I_iter){
 
-  double beta = (5.57412E-24*pow(I_iter,6) - 4.57913E-20*pow(I_iter,5) + 1.34093E-16*pow(I_iter,4) - 1.5001E-13*pow(I_iter,3) + 1.28572E-12*pow(I_iter,2) + 2.34223E-12*I_iter + 0.00973899);
+  double beta = betaG[3];//(5.57412E-24*pow(I_iter,6) - 4.57913E-20*pow(I_iter,5) + 1.34093E-16*pow(I_iter,4) - 1.5001E-13*pow(I_iter,3) + 1.28572E-12*pow(I_iter,2) + 2.34223E-12*I_iter + 0.00973899);
 
   return beta/betaG[3];
 }
