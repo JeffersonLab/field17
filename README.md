@@ -33,9 +33,16 @@ SHMSMagnets.h contains all the parameterizations and magnet constants. HMSDipole
 There is a debug flag that can be set in the getSHMS.C and getHMS.C files if more information is desired. 
 
 
-## Version notes:
+## SHMS Version notes:
 Version 1: 
 Q1, Q2, Q3 at 1.05
 
 Version 2: 
 Q1 at 1.03, Q2 at 1.04, Q3 at 1.03
+
+Version 3:
+Q1 and Q3 saturations removed
+
+## HMS Version notes:
+Version 1:
+Saturation correction at 5.3 GeV and above added to dipole model.

@@ -39,17 +39,32 @@ int main(int argc, char *argv[]){
       if (ii > 100) {break;}
     }
 
+  //includes results from Mark's saturation study
+  double satFactor = 1.0;
+  if (P>=5.3){
+    satFactor = 0.01*P+0.948;
+  }
+
+  Biter = Biter*satFactor;
+  I_iter = I_iter*satFactor;
+
   cout<<"Magnet:\t"<<magnet<<"\tVersion:\t"<<getVersion()<<endl;
   cout<<"Set the HMS Dipole by NMR"<<endl;
     if (debug == 1){
       cout<<"\tRequested energy:\t"<<P<<" [GeV]"<<endl;
+      cout<<"\tSaturation:\t"<<satFactor<<endl;
       cout<<"\tbeta ratio: "<<calcBetaRatioDip(I_iter)<<" leff ratio: "<<calcLeffRatioDip(I_iter)<<endl;
       cout<<"\tResulting difference from nominal: "<<eta<<endl;
       cout<<"\tUncertainty: +/-"<<calcErrorDip(I_iter)<<"[%]"<<endl;
     }
-    cout<<"\tRecommended NMR B: "<<Biter<<" [T]"<<endl;
-    cout<<"\tCorresponds to approx Iset: "<<I_iter<<" [A]."<<endl;
-
+    if (P<0.01){
+      cout<<"\tRecommended NMR B: "<<0.0<<" [T]"<<endl;
+      cout<<"\tCorresponds to approx Iset: "<<0.0<<" [A]."<<endl;
+    }
+    else{
+      cout<<"\tRecommended NMR B: "<<Biter<<" [T]"<<endl;
+      cout<<"\tCorresponds to approx Iset: "<<I_iter<<" [A]."<<endl;
+    }
 
   return 0;
 

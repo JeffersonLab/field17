@@ -13,7 +13,7 @@ using namespace std;
  ***************************************************/
 
 // version number per magnet:
-const int version_dip = 0;
+const int version_dip = 1;
 
 
 double getVersion(){
