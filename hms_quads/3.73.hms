@@ -1,0 +1,8 @@
+ Input HMS momentum in GeV, electron is negative.
+ ###Parameterization for B>   0.98360000000000 is disabled###
+  Field03 program
+ Set current for Q1 =    -485.94788066833 amps
+ Set current for Q2 =     386.39013589131 amps
+ Set current for Q3 =    -187.89708106726 amps
+ Set NMR for Dipole =     1.0252213528594 Tesla
+ Set MPS for Dipole =     1147.4530816812 amps

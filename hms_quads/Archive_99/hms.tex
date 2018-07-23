@@ -1,0 +1,443 @@
+\documentclass[12pt,epsf,here]{article}
+\setlength{\textwidth}{6 in}
+\setlength{\textheight}{9 in}
+\setlength{\leftmargin}{0.7 in}
+\setlength{\rightmargin}{0.7 in}
+\newcommand{\h}{\hspace*{1 in}}
+\input{epsf}
+\begin{document}
+\title{High Momentum Spectrometer(HMS) Magnet
+\footnote{document source can be found at 
+/home/cdaq/documents/slow\_controls/hmssource/hms.tex} }
+\author{Sudhir Malik
+\footnote{Slight modifications by David McKee to bring it up to date.
+The bulk of this document was written in August 1998 by Sudhir Malik.}
+}
+\date{28 Febuary 1999}
+\maketitle
+%\begin{abstract}
+%\end {abstract}
+\section{Overview}
+
+The HMS is composed of three superconducting quadrupole magnets, Q1, Q2,
+and Q3, and one superconducting dipole magnet The quadrupole magnets are
+referred to as Q1, Q2, and Q3, where a particle first traverses Q1, then Q2
+and Q3, and finally traverses the dipole magnet.  All of them have
+independent power supplies controlled by separate PC computers.\textbf{
+Access to these computers is through a display screen(HMS control Screen)
+in the counting house for our purpose.}
+
+
+\section{How to determine settings for magnet(field program)}
+
+To know the settings for the magnets(Q1,Q2,Q3 \& Dipole) one has to look
+at the screen corresponding to each of them. To select a page i.e. a
+magnet do the following \\
+\\
+\h{Press and hold "Num lock"}\\
+\h{Press and hold "minus(-)"}\\
+\h{Release        "minus(-)}\\
+\h{Release        "Num lock"}\\
+\\
+and then press any one of the following key\\
+\\
+\h{"A" for Q1}\\
+\h{"B" for Q2}\\
+\h{"C" for Q3}\\
+\h{"D" for Q4}\\
+\\
+and then\\
+\\
+\h{Press "Return"}\\
+\\
+If you want the screens for the the quads and dipole to be display one
+after another in continuous manner i.e CYCLE , press
+\\
+\h{"KG"} to start CYCLE
+\\
+To stop it
+\\
+\h{"KH"} to stop CYCLE
+
+\textbf{Do not confuse this word ``CYCLE'' with ``CYCLING THE MAGNETS'' 
+which is explained in section 3}
+\\
+\section{How to change the HMS Magnet Central Momentum value}
+
+To obtain the predicted current or field settings do the following:
+\\
+In \textbf{cdaqh1(the screen is probably already opened) } from the home
+directory go to the directory /cdaq/FIELD.\\
+\\
+then type ``field99'' against the prompt.\\
+\\
+This will display the following message\\
+\begin{verbatim}Input HMS momentum( i.e. central momentum) in GeV/c,electron 
+is negative: \end{verbatim}  
+
+Type the momentum of the particle: \textbf{for electron always include the 
+negative sign in front of the value i.e. say for e.g. type the value
+-2.455 and not 2.455}
+\\
+This will then give for the following result for -2.455 GeV/c.\\
+\begin{verbatim}
+ Set current for Q1 =  318.8337885684941 amps
+ Set current for Q2 =  -253.45770666407 amps
+ Set current for Q3 =  124.5714821214358 amps
+ Set NMR for Dipole =  -.672752725470763 Tesla
+\end{verbatim}
+\textbf{Note that the current values are in Amperes and the NMR field is in
+Tesla.}\\
+\\
+Thus you will obtain the above set of values that correspond to  a
+required setting of HMS central momentum. Now type in these values against
+the command line in the display screen for each of the magnet as
+given in section 4.Note that for Q1,Q2 and Q3 you get current values while
+for Dipole you get a NMR field value. 
+
+\section{How to cycle the HMS Magnets with above obtained values }
+
+First select a magnet as described above in Section 2. This particular 
+screen will have, say for Q2, the following heading "Q2 PSU Display
+Screen". PSU stands for Power Supply Unit.Then for each of them do the
+following:
+
+\subsection{For Quadrupoles(Q1,Q2,Q3)}
+
+The quadrupoles suffer from some hysterisis effects. Jochen Volmer designed 
+and tested a procedure for setting the quadrupoles that achieved a very 
+high degree of reproducablility in setting the quads at low current. 
+The procedure given here is taken from that procedure, but has not yet 
+been tested.\\
+\textbf{The procedure (tm):}
+\begin{enumerate}
+	\item{On every change of polarity, take the magnet up to 950 Amps 
+	(in the new polarity!), then down to zero before setting the
+	current.}
+	\item{To set the current the first time after a polarity change 
+	(or when you're not sure if it's been done already), 
+	go up to 950 Amps, then down to the desired current.
+	
+	This means: to change the polarity and set the current go to 950 Amps,
+	down to zero, back up to 950 Amps, and down to the desired setting.}
+	\item{Subsequently:
+	\begin{itemize}
+		\item{Changes to lower currents can be made directly. 
+		I.e. just set the magnet for the lower current.}
+		\item{For changes to higher current, first overshoot 
+		by 100 Amps, then come back down to the desired current.}
+	\end{itemize}}
+\end{enumerate}
+This procedure is called \textbf{CYCLING THE MAGNET}, and needs to be 
+followed for all three quadrupoles.
+
+%For Q1,Q2 and Q3 do the following. At this stage you already have the current
+%values calculated for each of them from section 3. 
+%For example you want to feed-in 318.91 Amperes for Q1. 
+%In order to do this first feed-in a value that is
+%about 100 Amperes higher than this value i.e. feed-in 418.91 Amperes and after
+%this value is achieved then feed-in the set value i.e. 318.91 Amperes. 
+
+ 
+%Do the same procedure 
+%for Q2 and Q3. \\
+%\\
+
+A current can be selected by typing-in 
+\begin{verbatim}psu:setcur:\#.\#\#. \end{verbatim} 
+against the command line. While typing in the current values, 
+the negative sign for the current value is taken care of automatically. 
+So basically you type in the number only. 
+After typing in the current value press $<enter>$, 
+then go to the next screen/magnet as explained in section 2.\\
+\\
+There is a readback of the set current from the power supply.The MPS
+voltage and current are also displayed to further indicate where ramp   
+up/down is in progress.There is a list of MPS interlocks displayed to help
+understand trips.\\
+
+\subsection{For Dipole}
+Use the Field Setting Procedure for the Dipole. This will bring the
+magnet to a field near but not equal to the desired field.   
+Turn field control on for the Dipole. The magnet will go to the
+desired field.Wait at least 7 minutes for the dipole magnet to settle.\\
+\\
+\textbf{1.Be patient to have the response of what you type in. Do not go
+on typing command again and again. The response takes a while.}\\
+\\
+\textbf{2.Sometimes you might need to type in twice a particular current
+value. Again the keyword is PATIENCE}\\
+
+
+
+\section{What routine checks to make}
+\subsection{checking cryogenics}
+Click on the He(for Liquid helium) and N2(for liquid nitrogen) from the   
+menu in the upper right corner of the screen for their status display for
+a given magnet\\
+\\
+The HMS magnets all operate with liquid level control of a reservoir. It
+is therefore sufficient to verify that the liquid level is near the set  
+point to be assured of cryogenic happiness.  The liquid level is normally
+within a few \% of these values. If the level is significantly above [85%
+for quads or 94\% for the dipole] the helium reservoirs are overfilling.  
+This is not harmful and the levels will return to normal in several hours.
+If the level is significantly below the set points (5% or more) there is
+usually something wrong.  Selecting a time graph of liquid level is
+helpful in determining if the situation is a temporary fluctuation or if
+the situation is serious.
+
+\subsection{Helium Problem Resolution}
+
+If helium liquid level is observed falling, check all four systems. If all
+four systems are losing then call CHL x7405 as the likely cause is a site
+wide problem. CHL will advise if recovery is short (1-2 hours) or much   
+longer. If the recovery is short do nothing! If the recovery is long then 
+it can be beneficial to make some adjustments in Hall C. This requires an 
+access and a knowledgeable individual, the on-call cryo operator should be
+summoned.
+
+\subsection{Single System Failures}
+
+\subsubsection{Single System Loss of L$N_2$}
+
+If a single system is observed losing LN you can wait until the next day
+to call someone in as the LN usage of all the magnets is extremely low.
+They can go for 24 hours without a refill.
+
+\subsubsection{Single System Loss of LHe Level}
+
+This is usually caused by a single computer failure or components failure.
+Call the cryo operator and plan an access to Hall C. The dipole reservoir
+will go empty in 1 hour so a quick reaction is necessary. The quads take
+much longer, 4 hours or more to empty allowing more time to react. All of
+the magnets have low level interlocks so that you can safely operate until
+they are ``dry."
+
+\subsection{Temporary Loss of L$N_2$ To All Systems}  
+
+Occasionally during site LN delivery, the supply to Hall C is temporarily
+stopped. This can be checked by calling CHL x7390. There can be local Hall
+C problems that result in loss of LN to the magnets. The ``call in" can be
+deferred to a convenient time for this kind of problem.
+\subsection{Typical LHe and L$N_2$ \% at a glance}
+
+\begin{tabular}{|c|c|c|} \hline
+Magnet&Liquid $N_{2}$&Liquid He \\ \hline
+Q1&75\%&75\% \\ \hline
+Q2&75\%&75\% \\ \hline
+Q3&75\%&75\% \\ \hline
+Dipole&70\%&70\%/65\%(Hi/Low)\\ \hline
+\end{tabular}
+
+\section{Who to call with problems}
+\begin{tabbing}
+aaaaaaaaaaaaaaaaaaaa \=aaaaaaaa \=aaaaaaa \=aaaaaa    \kill
+\textbf{Name}    \> \textbf{Phone}   \>\textbf{Page}   \> \textbf{Home}\\
+\\
+\textbf{Paul Brindza} \>7588 \>7588 \>898-3734\\
+\textbf{Mike Fowler} \>7162 \>7162 \>875-0074\\
+\textbf{Steve Lassiter} \>7129 \>7129 \>919-465-4348\\
+\end{tabbing}
+
+
+\subsection{HMS-Magnets and Power Supplies-general information}
+
+\subsubsection{Magnets}
+The HMS magnets are all superconducting and hence their coils must be
+maintained at cryogenic temperatures during operations. All the HMS
+magnets cryogenic services are supplied through the overhead cryogenic
+lines. 
+
+Cryogenic information about each magnet is available on the control
+screens downstairs, one for each magnet. These are located on the first
+deck of the shield house by the ``pasta fork" at the rear of the
+spectrometer. \textbf{During run periods the control screens are sent
+upstairs to the Hall C counting house and information on all the HMS
+magnets is available on the HMS control screen located in the center of
+the main console.}
+\subsubsection{Power supplies}
+
+The power supplies for the magnets are located on the carriage adjacent to
+the magnets. The supplies are all water cooled and the water flow rate to
+the supplies can be seen on the water flow meter located near the
+electronics boxes on the floor near the pivot. Under normal conditions the
+meter should read approximately 33 . This meter views the flow for all the
+HMS power supplies (dipole and quads) and a reading of 33 corresponds to
+approximately 20 gallons per minute through the combination of supplies
+(they are supplied in parallel).
+
+The front panel of the power supplies are interlocked. Under no
+circumstances should the front panel of any supply be opened by anyone
+other than authorized personnel. \textbf{There is a keyed electrical
+interlock located in the Hall C counting house main console to prevent the
+power supplies from being energized at inappropriate times.} Personnel
+listed in the Responsible Personnel manuscript maintain a copy of the key. 
+
+When the supplies are energized there are flashing red lights placed at
+several locations on the HMS carriage to alert personnel to the magnet
+status. There are also signs posted listing the dangers of high magnetic
+fields. 
+
+\textbf{The control interface for the power supplies is available through
+the HMS control screen in the Hall C counting house.} 
+
+\subsection{ HMS-Quadrupole Magnets}
+The quadrupoles determine the transverse focusing properties of the
+spectrometer and to a large extent its acceptance. There are currently no
+operating limits imposed on the quads.\\
+\\
+All three quadrupoles for the HMS spectrometer are cold iron
+superconducting magnets. The soft iron around the superconducting coil
+enhances the field at the coil center and reduces stray fields. The basic
+parameters for the first quadrupole, Q1, are an effective (actual) length
+of 1.89 (2.34) meter and an inner pole radius of 25.0 centimeter. [10] The
+vacuum vessel inner radius for Q1 is 20.05 cm. To achieve the lowest
+possible angle setting of the HMS spectrometer (with respect to the beam
+line), Q1 is made asymmetrical, and is elongated in the vertical
+direction. For the same reason a notch in the outer mantle of the Q1 cryo
+vessel is made, such that the incident electron beam passes through this
+notch when the HMS spectrometer is at its smallest angle of 12.5 degrees.
+The other two quadrupoles, Q2 and Q3, are essentially identical with an
+effective (actual) length of about 2.10 (2.60) meter and an inner pole
+radius of 35.0 centimeter. For these quadrupoles the vacuum vessel inner
+radius amounts to 30.0 centimeter.\\
+\\
+The maximum operating currents (assuming a 4 GeV/c momentum particle) for
+the quadrupoles are about 580 A, 440 A, and 220 A, for Q1, Q2, and Q3,
+respectively. To establish a correct focusing onto the detector plane with
+the quadrupole triplet we may want to cycle the quadrupoles to about 20%
+higher current values, rendering maximum currents of 700 A, 530 A, and 270
+A, respectively. This will render pole field values of 1.25, 1.30, and
+0.65 T, respectively. The energy stored in the quadrupole fields is
+sufficient to cause an unrecoverable quench if all the energy stored is
+dumped into the magnets. [11] Therefore a quench protection circuit is
+incorporated. However, a quench can only happen if the cryomagnets have a
+helium level below the coil during operation.\\
+\\
+The operating current to the quadrupole coils is provided by three
+Danfysik System 8000 power supplies, which can operate up to 1250 A
+current and 5 V voltage. The power supplies will be cooled with a combined
+maximum water flow of 45 liters per minute.\\ 
+\\
+In addition to the main quadrupole windings, all quadrupoles have
+multipole windings.  To further optimize focusing properties of the HMS
+magnet system we intend to operate including some of these multipole trim
+coils. [12] The operating current for these multipole corrections is
+small, only (the multipole corrections are typically less than 2% of the
+main quadrupole field), of order 50 A, and will be provided by three HP
+power supplies. These power supplies can operate up to 100 A current and 5
+V voltage.\\
+\\
+\subsection{HMS - Dipole Magnet}
+The dipole is the dispersive element in the system determines the
+central momentum of the spectrometer. The present operations envelope
+states that the supply may not be operated at a currents above 1300 Amps.
+This corresponds to a central momentum of 4 GeV/c.\\
+\\
+The dipole for the HMS spectrometer is a superconducting, cryostable
+magnet. Its basic parameters are an effective length of 5.26 meter, a bend
+radius of 12.06 meter, and a gap width of 42 cm. Its actual size is 5.99
+meter long, 2.75 meter wide, and 4.46 meter high. It is configured to
+achieve a 25 degree bending angle for 4 GeV/c momentum particles at a
+central field excitation of 1.11 T. For the HMS dipole to reach 1.11 T the
+maximum operating current for the coil amounts to 1300 A.\\ 
+\\
+The dipole has been designed to achieve cryostability up to a field of 2
+T, and this property has been extensively tested up to a field of 1.11 T.
+The cryostable coils are equipped with an energy removal circuit to cover
+the possibility of an unrecoverable quench. However, this can only happen
+if the helium level drops below the coil during operation. The current to
+the coils will be provided by a Danfysik System 8000 power supply, which
+can operate up to 3000 A current and 10 V voltage. This power supply is
+located on the carriage beside the dipole, and will be cooled with a
+maximum water flow of 35 liters per minute. The flow of the magnet cooling
+water will be regulated by flow meters installed on the floor of Hall C.
+The total water flow needed to cool the 4 power supplies for the HMS
+magnet system (dipole and quadrupoles) amounts to 80 liters per minute,
+with a supply pressure of cooling water for Hall C of 250 psi.\\
+\\
+
+\section{Sample screens}
+
+In the following pages are shown typical copies of the various HMS
+superconducting magnet control screens.  These screens can be checked when
+scrolling through the pages of the magnet control program.  These typical
+examples may be used as references for comparing current values to
+determine if operations are reasonable. 
+
+Small deviations are not to be considered as cause for alarm but rather
+should prompt the operator to look at the trend graph for the variable in
+question. This is at present the best way to determine if the cryogenic
+state is deteriorating or is merely just slightly different. The Key
+Operators for the HMS magnets will make adjustments to the control
+parameters to suit changing situations but these are usually small (at the
+few percent level) changes in valve limits or setpoints.\\
+\\
+\textbf{For detailed information see the following web site}\\
+\begin{verbatim}http://www.jlab.org/Hall-C/document/manual3/manual3.html \end{verbatim}
+
+
+\begin{figure}[htbp]
+\centerline{\epsfxsize=15.cm \epsfysize=15cm \epsfbox{hms1.ps} }
+\textbf{Figure: Sample Helium Monitoring Page - Q3} 
+\end{figure}
+
+\begin{figure}[htbp]
+\centerline{\epsfxsize=13.cm \epsfysize=10cm \epsfbox{hms2.ps} }
+\textbf{Figure: Sample Nitrogen Monitoring Page - Q2 }
+\end{figure}
+
+\begin{figure}[htbp]
+\centerline{\epsfxsize=13.cm \epsfysize=10cm \epsfbox{hms3.ps} }
+\textbf{Figure: Sample Power Supply Monitoring Page - Q2 }
+\end{figure}
+
+\begin{figure}[htbp]
+\centerline{\epsfxsize=13.cm \epsfysize=10cm \epsfbox{hms4.ps} }
+\textbf{Figure: Sample Interlock Monitoring Page - Q3  }
+\end{figure}
+
+
+
+\begin{figure}[htbp]
+\centerline{\epsfxsize=13.cm \epsfysize=10cm \epsfbox{hms5.ps} }
+\textbf{ Figure: Q1 Valve Control Page }  
+\end{figure}
+
+\begin{figure}[htbp]
+\centerline{\epsfxsize=13.cm \epsfysize=10cm \epsfbox{hms6.ps} }
+\textbf{Figure: Q2 Valve Control Page }
+\end{figure}
+
+\begin{figure}[htbp]
+\centerline{\epsfxsize=13.cm \epsfysize=10cm \epsfbox{hms7.ps} }
+\textbf{ Figure: Q3 Valve Control Page }
+\end{figure}
+
+\begin{figure}[htbp]
+\centerline{\epsfxsize=13.cm \epsfysize=10cm \epsfbox{hms8.ps} }
+\textbf{Figure: Sample Magnet Temperature Display - Q3 }
+\end{figure}
+
+
+\begin{figure}[htbp]
+\centerline{\epsfxsize=13.cm \epsfysize=10cm \epsfbox{hms9.ps} }
+\textbf{Figure: Sample Coil Voltage Monitoring Page - Q2 }
+\end{figure}
+
+\begin{figure}[htbp]
+\centerline{\epsfxsize=13.cm \epsfysize=10cm \epsfbox{hms10.ps} }
+\textbf{Figure: Sample Trend Page }
+\end{figure}
+
+\end{document}
+
+
+
+
+
+
+
+
+

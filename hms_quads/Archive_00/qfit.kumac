@@ -1,0 +1,33 @@
+macro qfit                                          
+* fit difference between set and readback current in q3
+opt date
+opt fit
+set fit 111
+set xmgl 3.0
+set xlab 1.5
+set asiz 0.55
+vec/cre p(7) r 0.4 0.53 0.8 1.2 1.62 2.15 3.2
+vec/cre q(7) r .97 .979 .987 .992 .996 .998 1.0
+vec/cre dq(7) r 7*0.001
+vec/cre par(2) r 0.01 0.001
+*vec/cre par(2) r 0.9285 0.001
+vec/cre pmin(2) r 0.9285 0.0
+vec/cre pmax(2) r 0.9285 1.0
+vec/cre step(2) r 0.0 0.01
+null 0. 6.5 0.96 1.02
+atit 'p?HMS!' 'I?read!/I?set!'
+hplot/sym p q 7 20
+set plci 1
+*vec/fit p q dq qfit.for 'sb' 2 par step pmin pmax
+vec/fit p q dq qfit.for 's' 2 par 
+fun/pl qfit.for 0. 10. 's'
+set dmod 2
+line 0. 1. 10. 1.
+set dmod 1
+set plci 2
+fun/pl (1.0107*(1.004-0.0136/x)) 0. 10. 's'
+text 1.6 0.975 'value at p=0.93 is 0.9894' 0.45
+text 1.6 0.97 'renormalisation factor is 1.0107' 0.45
+set dmod 2
+line 0.93 0. 0.93 2.
+

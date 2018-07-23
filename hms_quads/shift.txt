@@ -1,0 +1,35 @@
+Swing Shift Summary: (Dutta, Fomin, Trojer) 
+-------------------
+
+
+4:00 PM start shift with data taking in progress on Gold target
+in kinematics IV.1 HMS 46 deg, -1.8 GeV/c, SOS 50 deg, +1.7 GeV/c
+
+4:30 PM MCC takes away beam to do a spot change since the current 
+has drifted down to about 45 muA.
+We start changing HMS and SOS settings. SOS was a breeze, but HMS dipole
+just would not set. After a valiant struggle we call MCC for controlled 
+access to power cycle the dipole.
+MCC said there was a vacuum problem in the Hall which had shut some valve
+which they needed to check out.
+
+We go down but are unable to fix the dipole and since some area had 
+> 1.5rad/hr radiation level, we have to leave hall before we can fix the
+dipole.
+
+8:00 PM Dipole is back.
+
+8:45 turbo pump on beamline was reset, vacuum at mid 10^-4 now, MCC still cannot
+open the valve 3H00B
+
+11:00 PM vacuum gauge reads 2.9 10^-4 but valve 3H00B still cannot be opened.
+         The other vacuum gauge reads 5.3 10^-4, this one needs to come down to 4.5 10^-4
+before gate valves can be opened.
+
+
+12:00 Still waiting for proper vacuum
+
+Run list 
+
+      49389 : hms=-1.8 thms = 46.00 deg sos=+1.7 tsos=50.00, Au target
+      49390 : hms=-1.8 thms = 46.00 deg sos=+1.7 tsos=50.00, Au 

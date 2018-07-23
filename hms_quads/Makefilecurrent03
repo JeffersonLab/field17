@@ -1,0 +1,22 @@
+#--------------------------------------------------------------------------
+# Makefile for `current03', and effective length programs
+#
+# 19APR2003 JR  -- modify field03 to print dipole set current
+# 22FEb1999 DWM -- Use `f77' rather than `g77' on the cdaq machines.
+# 20Jan1999 DWM -- works on linux, but there is nothing special here.
+#--------------------------------------------------------------------------
+
+OBJ = current03.o params03.o
+
+FC = f77
+
+FFLAGS = 
+
+all : current03
+
+current03 : ${OBJ}
+	${FC}  ${FFLAGS} ${OBJ} -o $@ 
+
+clean : 
+	rm -f current03.o
+	rm -f current03

@@ -1,0 +1,6 @@
+1. Field 99 is currently set up to be compiled and run on the HPs only.
+
+2. ~cdaq/FIELD is maintained on the CUE machines, but is visable from the CUE,
+cdaqh, and cdaqs machines.  A backup version (not necessarily kept up to date)
+is kept in ~cdaq/FIELD_BACKUP directory on cdaqh1 (in case the CUE machines
+go down).  Unfortunately, if the CUE machine is down, you can't read this.

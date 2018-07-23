@@ -1,0 +1,21 @@
+#--------------------------------------------------------------------------
+# Makefile for `field', and effective length programs
+#
+# 22FEb1999 DWM -- Use `f77' rather than `g77' on the cdaq machines.
+# 20Jan1999 DWM -- works on linux, but there is nothing special here.
+#--------------------------------------------------------------------------
+
+OBJ = field02.o params02.o
+
+FC = f77
+
+FFLAGS = 
+
+all : field02
+
+field02 : ${OBJ}
+	${FC} ${FFLAGS} ${OBJ} -o $@ 
+
+clean : 
+	rm -f *.o
+	rm -f field02

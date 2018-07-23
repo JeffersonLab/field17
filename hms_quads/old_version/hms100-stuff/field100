@@ -1,0 +1,9 @@
+#!/usr/local/bin/bash
+# 18.6.1998 (saw) Changed to bash.
+if [ `uname -s` = "SunOS" ]; then
+  /net/fs1/home/cdaq/hms100-stuff/field100.sun
+elif [ `uname -s` = "HP-UX" ]; then
+  /net/fs1/home/cdaq/hms100-stuff/field100.hp
+else
+  echo "Choose Sun or HP!"
+fi

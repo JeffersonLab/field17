@@ -1,0 +1,460 @@
+HMS angle 22.7
+
+-1.9621
+  Field03 program
+ Set current for Q1 =     255.55971094457 amps
+ Set current for Q2 =    -203.12509034911 amps
+ Set current for Q3 =     99.040774940056 amps
+ Set NMR for Dipole =   -0.53929941459661 Tesla
+ Set MPS for Dipole =    -600.14017490192 amps
+-1.6677
+  Field03 program
+ Set current for Q1 =     217.19426201269 amps
+ Set current for Q2 =    -172.60683173288 amps
+ Set current for Q3 =     84.244243721396 amps
+ Set NMR for Dipole =   -0.45838113945404 Tesla
+ Set MPS for Dipole =    -509.60384013908 amps
+-1.4176
+  Field03 program
+ Set current for Q1 =     184.60187485962 amps
+ Set current for Q2 =    -146.68082466794 amps
+ Set current for Q3 =     71.674399506940 amps
+ Set NMR for Dipole =   -0.38963908574087 Tesla
+-1.2049
+  Field03 program
+ Set current for Q1 =     156.88335927602 amps
+ Set current for Q2 =    -124.63179746797 amps
+ Set current for Q3 =     60.984454192623 amps
+ Set NMR for Dipole =   -0.33117673138345 Tesla
+-1.0242
+  Field03 program
+ Set current for Q1 =     133.33500118502 amps
+ Set current for Q2 =    -105.89997229150 amps
+ Set current for Q3 =     51.903014073066 amps
+ Set NMR for Dipole =   -0.28150984171543 Tesla
+-.8706
+  Field03 program
+ Set current for Q1 =     113.31824522056 amps
+ Set current for Q2 =    -89.977402578689 amps
+ Set current for Q3 =     44.183821336120 amps
+ Set NMR for Dipole =   -0.23929161120627 Tesla
+-.7400
+  Field03 program
+ Set current for Q1 =     96.298789953899 amps
+ Set current for Q2 =    -76.439071820268 amps
+ Set current for Q3 =     37.620832361919 amps
+ Set NMR for Dipole =   -0.20339512094261 Tesla
+-.629
+  Field03 program
+ Set current for Q1 =     81.833556151457 amps
+ Set current for Q2 =    -64.932527301242 amps
+ Set current for Q3 =     32.043191799348 amps
+ Set NMR for Dipole =   -0.17288585280122 Tesla
+-.5346
+  Field03 program
+ Set current for Q1 =     69.531591548299 amps
+ Set current for Q2 =    -55.146781331909 amps
+ Set current for Q3 =     27.300157649539 amps
+ Set NMR for Dipole =   -0.14693923196746 Tesla
+-.4544
+  Field03 program
+ Set current for Q1 =     59.080134332481 amps
+ Set current for Q2 =    -46.833043760505 amps
+ Set current for Q3 =     23.271151005704 amps
+ Set NMR for Dipole =   -0.12489559858962 Tesla
+
+HMS angle 24.9
+-2.2201
+  Field03 program
+ Set current for Q1 =     289.18160572863 amps
+ Set current for Q2 =    -229.87003166360 amps
+ Set current for Q3 =     112.00795756541 amps
+ Set NMR for Dipole =   -0.61021284865498 Tesla
+-1.8871
+  Field03 program
+ Set current for Q1 =     245.78590432130 amps
+ Set current for Q2 =    -195.35039810652 amps
+ Set current for Q3 =     95.271262718137 amps
+ Set NMR for Dipole =   -0.51868504423081 Tesla
+-1.6041
+  Field03 program
+ Set current for Q1 =     208.90607399615 amps
+ Set current for Q2 =    -166.01389271117 amps
+ Set current for Q3 =     81.047735710178 amps
+ Set NMR for Dipole =   -0.44090015338384 Tesla
+-1.3634
+  Field03 program
+ Set current for Q1 =     177.53867060653 amps
+ Set current for Q2 =    -141.06231374063 amps
+ Set current for Q3 =     68.950376785493 amps
+ Set NMR for Dipole =   -0.37474176742318 Tesla
+-1.1589
+  Field03 program
+ Set current for Q1 =     150.88875788041 amps
+ Set current for Q2 =    -119.86331955918 amps
+ Set current for Q3 =     58.672606614725 amps
+ Set NMR for Dipole =   -0.31853325089242 Tesla
+-.9851
+  Field03 program
+ Set current for Q1 =     128.23958999875 amps
+ Set current for Q2 =   -101.846766069035 amps
+ Set current for Q3 =     49.938007057309 amps
+ Set NMR for Dipole =   -0.27076288329806 Tesla
+-.8373
+  Field03 program
+ Set current for Q1 =     108.97867507982 amps
+ Set current for Q2 =    -86.525439222981 amps
+ Set current for Q3 =     42.510374020267 amps
+ Set NMR for Dipole =   -0.23013883076385 Tesla
+-.7117
+  Field03 program
+ Set current for Q1 =     92.610806921385 amps
+ Set current for Q2 =    -73.505421280732 amps
+ Set current for Q3 =     36.198742673370 amps
+ Set NMR for Dipole =   -0.19561663185791 Tesla
+-.6050
+  Field03 program
+ Set current for Q1 =     78.705938032010 amps
+ Set current for Q2 =    -62.444625783615 amps
+ Set current for Q3 =     30.837285058829 amps
+ Set NMR for Dipole =   -0.16628925428416 Tesla
+-.5142
+  Field03 program
+ Set current for Q1 =     66.873116146769 amps
+ Set current for Q2 =    -53.032065041926 amps
+ Set current for Q3 =     26.275262787543 amps
+ Set NMR for Dipole =   -0.14133212322796 Tesla
+-.450
+  Field03 program
+ Set current for Q1 =     58.506737677249 amps
+ Set current for Q2 =    -46.376928482274 amps
+ Set current for Q3 =     23.050129337316 amps
+ Set NMR for Dipole =   -0.12368622219483 Tesla
+
+HMS angle 16.76
+-2.5356
+  Field03 program
+ Set current for Q1 =     330.29675225719 amps
+ Set current for Q2 =    -262.57557036407 amps
+ Set current for Q3 =     127.86520784427 amps
+ Set NMR for Dipole =   -0.69693063332714 Tesla
+-2.1553
+  Field03 program
+ Set current for Q1 =     280.73703680612 amps
+ Set current for Q2 =    -223.15269756600 amps
+ Set current for Q3 =     108.75107606724 amps
+ Set NMR for Dipole =   -0.59240203265893 Tesla
+-1.832
+  Field03 program
+ Set current for Q1 =     238.60541438874 amps
+ Set current for Q2 =    -189.63859087230 amps
+ Set current for Q3 =     92.501933872771 amps
+ Set NMR for Dipole =   -0.50354035346873 Tesla
+-1.5572
+  Field03 program
+ Set current for Q1 =     202.79418692107 amps
+ Set current for Q2 =    -161.15211849547 amps
+ Set current for Q3 =     78.690569597957 amps
+ Set NMR for Dipole =   -0.42800930044842 Tesla
+-1.3236
+  Field03 program
+ Set current for Q1 =     172.35203722512 amps
+ Set current for Q2 =    -136.93654372390 amps
+ Set current for Q3 =     66.950088216948 amps
+ Set NMR for Dipole =   -0.36380240821573 Tesla
+-1.1251
+  Field03 program
+ Set current for Q1 =     146.48402902886 amps
+ Set current for Q2 =    -116.35952492186 amps
+ Set current for Q3 =     56.973911321915 amps
+ Set NMR for Dipole =   -0.30924304131423 Tesla
+-.9563
+  Field03 program
+ Set current for Q1 =     124.48644825541 amps
+ Set current for Q2 =    -98.861284247882 amps
+ Set current for Q3 =     48.490648160395 amps
+ Set NMR for Dipole =   -0.26284696507759 Tesla
+-.8129
+  Field03 program
+ Set current for Q1 =     105.79892999172 amps
+ Set current for Q2 =    -83.996072680060 amps
+ Set current for Q3 =     41.284198566197 amps
+ Set NMR for Dipole =   -0.22343228893817 Tesla
+-.6909
+  Field03 program
+ Set current for Q1 =     89.900204551197 amps
+ Set current for Q2 =    -71.349239965456 amps
+ Set current for Q3 =     35.153548764142 amps
+ Set NMR for Dipole =   -0.18989957980980 Tesla
+-.5873
+  Field03 program
+ Set current for Q1 =     76.399319668918 amps
+ Set current for Q2 =    -60.609798414365 amps
+ Set current for Q3 =     29.947948911944 amps
+ Set NMR for Dipole =   -0.16142426287783 Tesla
+-.4992
+  Field03 program
+ Set current for Q1 =     64.918354822115 amps
+ Set current for Q2 =    -51.477126593409 amps
+ Set current for Q3 =     25.521687432114 amps
+ Set NMR for Dipole =   -0.13720924915480 Tesla
+-.45
+  Field03 program
+ Set current for Q1 =     58.506737677249 amps
+ Set current for Q2 =    -46.376928482274 amps
+ Set current for Q3 =     23.050129337316 amps
+ Set NMR for Dipole =   -0.12368622219483 Tesla
+
+HMS angle 32.3
+-1.9267
+  Field03 program
+ Set current for Q1 =     250.94647421839 amps
+ Set current for Q2 =    -199.45543561061 amps
+ Set current for Q3 =     97.261564031212 amps
+ Set NMR for Dipole =   -0.52956943178395 Tesla
+-1.6377
+  Field03 program
+ Set current for Q1 =     213.28473936338 amps
+ Set current for Q2 =    -169.49695483585 amps
+ Set current for Q3 =     82.736455583724 amps
+ Set NMR for Dipole =   -0.45013539130772 Tesla
+-1.3921
+  Field03 program
+ Set current for Q1 =     181.27878060771 amps
+ Set current for Q2 =    -144.03742930546 amps
+ Set current for Q3 =     70.392800509983 amps
+ Set NMR for Dipole =   -0.38263019981650 Tesla
+-1.1832
+  Field03 program
+ Set current for Q1 =     154.05547122635 amps
+ Set current for Q2 =    -122.38231984578 amps
+ Set current for Q3 =     59.893863349803 amps
+ Set NMR for Dipole =   -0.32521230689094 Tesla
+-1.0058
+  Field03 program
+ Set current for Q1 =     130.93716062677 amps
+ Set current for Q2 =   -103.992581127988 amps
+ Set current for Q3 =     50.978302668591 amps
+ Set NMR for Dipole =   -0.27645244951902 Tesla
+-.8549
+  Field03 program
+ Set current for Q1 =     111.27226170075 amps
+ Set current for Q2 =    -88.349900335908 amps
+ Set current for Q3 =     43.394836025275 amps
+ Set NMR for Dipole =   -0.23497633634302 Tesla
+-.7267
+  Field03 program
+ Set current for Q1 =     94.565568246039 amps
+ Set current for Q2 =    -75.060359729249 amps
+ Set current for Q3 =     36.952497325733 amps
+ Set NMR for Dipole =   -0.19973950593107 Tesla
+-.6177
+  Field03 program
+ Set current for Q1 =     80.360969286884 amps
+ Set current for Q2 =    -63.761140336693 amps
+ Set current for Q3 =     31.475407002296 amps
+ Set NMR for Dipole =   -0.16977995433277 Tesla
+-.5250
+  Field03 program
+ Set current for Q1 =     68.280544300521 amps
+ Set current for Q2 =    -54.151620724858 amps
+ Set current for Q3 =     26.817849770991 amps
+ Set NMR for Dipole =   -0.14430059256064 Tesla
+-.4463
+  Field03 program
+ Set current for Q1 =     58.024563217167 amps
+ Set current for Q2 =    -45.993376998306 amps
+ Set current for Q3 =     22.864272251568 amps
+ Set NMR for Dipole =   -0.12266924659012 Tesla
+
+HMS angle 36.2
+-1.7808
+  Field03 program
+ Set current for Q1 =     231.93316240058 amps
+ Set current for Q2 =    -184.33106763470 amps
+ Set current for Q3 =     89.928624363421 amps
+ Set NMR for Dipole =   -0.48946760996568 Tesla
+-1.5137
+  Field03 program
+ Set current for Q1 =     197.12537907957 amps
+ Set current for Q2 =    -156.64279699477 amps
+ Set current for Q3 =     76.504291528534 amps
+ Set NMR for Dipole =   -0.41605296563625 Tesla
+-1.2866
+  Field03 program
+ Set current for Q1 =     167.53029262430 amps
+ Set current for Q2 =    -133.10102888423 amps
+ Set current for Q3 =     65.090530637188 amps
+ Set NMR for Dipole =   -0.35363265216860 Tesla
+-1.0936
+  Field03 program
+ Set current for Q1 =     142.37903024708 amps
+ Set current for Q2 =    -113.09415417997 amps
+ Set current for Q3 =     55.390816217917 amps
+ Set NMR for Dipole =   -0.30058500576059 Tesla
+-.9296
+  Field03 program
+ Set current for Q1 =     121.00697309753 amps
+ Set current for Q2 =    -96.093493809522 amps
+ Set current for Q3 =     47.148835881778 amps
+ Set NMR for Dipole =   -0.25550824922736 Tesla
+-.7902
+  Field03 program
+ Set current for Q1 =    102.840724520409 amps
+ Set current for Q2 =    -81.642932494638 amps
+ Set current for Q3 =     40.143465244754 amps
+ Set NMR for Dipole =   -0.21719300617412 Tesla
+-.6716
+  Field03 program
+ Set current for Q1 =     87.385078313476 amps
+ Set current for Q2 =    -69.348552495031 amps
+ Set current for Q3 =     34.183743542532 amps
+ Set NMR for Dipole =   -0.18459481516900 Tesla
+-.5709
+  Field03 program
+ Set current for Q1 =     74.262113953963 amps
+ Set current for Q2 =    -58.909732377320 amps
+ Set current for Q3 =     29.123948034614 amps
+ Set NMR for Dipole =   -0.15691658722451 Tesla
+-.4853
+  Field03 program
+ Set current for Q1 =     63.106942661269 amps
+ Set current for Q2 =    -50.036216964450 amps
+ Set current for Q3 =     24.823394162612 amps
+ Set NMR for Dipole =   -0.13338871918034 Tesla
+-.450
+  Field03 program
+ Set current for Q1 =     58.506737677249 amps
+ Set current for Q2 =    -46.376928482274 amps
+ Set current for Q3 =     23.050129337316 amps
+ Set NMR for Dipole =   -0.12368622219483 Tesla
+
+HMS angle 19.83
+-2.4210
+  Field03 program
+ Set current for Q1 =     315.36237573683 amps
+ Set current for Q2 =    -250.69584061740 amps
+ Set current for Q3 =     122.10532207037 amps
+ Set NMR for Dipole =   -0.66543187540819 Tesla
+-2.0579
+  Field03 program
+ Set current for Q1 =     268.04411993803 amps
+ Set current for Q2 =    -213.05596390697 amps
+ Set current for Q3 =    103.855711005013 amps
+ Set NMR for Dipole =   -0.56563083701054 Tesla
+-1.7492
+  Field03 program
+ Set current for Q1 =     227.81513187664 amps
+ Set current for Q2 =    -181.05533063649 amps
+ Set current for Q3 =     88.340412565179 amps
+ Set NMR for Dipole =   -0.48078208858488 Tesla
+-1.4868
+  Field03 program
+ Set current for Q1 =     193.61984043736 amps
+ Set current for Q2 =    -153.85427404376 amps
+ Set current for Q3 =     75.152320427182 amps
+ Set NMR for Dipole =   -0.40865927813172 Tesla
+-1.2638
+  Field03 program
+ Set current for Q1 =     164.55905541083 amps
+ Set current for Q2 =    -130.73752244248 amps
+ Set current for Q3 =     63.944644815828 amps
+ Set NMR for Dipole =   -0.34736588357739 Tesla
+-1.0742
+  Field03 program
+ Set current for Q1 =     139.85087226720 amps
+ Set current for Q2 =    -111.08310045323 amps
+ Set current for Q3 =     54.415835066767 amps
+ Set NMR for Dipole =   -0.29525275529264 Tesla
+-.9131
+  Field03 program
+ Set current for Q1 =     118.85673564041 amps
+ Set current for Q2 =    -94.383061516153 amps
+ Set current for Q3 =     46.319631258544 amps
+ Set NMR for Dipole =   -0.25097308774689 Tesla
+-.7761
+  Field03 program
+ Set current for Q1 =    101.003248875234 amps
+ Set current for Q2 =    -80.181290353032 amps
+ Set current for Q3 =     39.434910244557 amps
+ Set NMR for Dipole =   -0.21331750454535 Tesla
+-.6597
+  Field03 program
+ Set current for Q1 =     85.834300995916 amps
+ Set current for Q2 =    -68.114967992540 amps
+ Set current for Q3 =     33.585788060018 amps
+ Set NMR for Dipole =   -0.18132400173762 Tesla
+
+HMS angle 12.0
+-2.6919
+  Field03 program
+ Set current for Q1 =     350.66536526009 amps
+ Set current for Q2 =    -278.77802899762 amps
+ Set current for Q3 =     135.72098307432 amps
+ Set NMR for Dipole =   -0.73989098116947 Tesla
+-2.2881
+  Field03 program
+ Set current for Q1 =     298.04319040039 amps
+ Set current for Q2 =    -236.91908596354 amps
+ Set current for Q3 =     115.42567748980 amps
+ Set NMR for Dipole =   -0.62890321111998 Tesla
+-1.9449
+  Field03 program
+ Set current for Q1 =     253.31825129230 amps
+ Set current for Q2 =    -201.34209426147 amps
+ Set current for Q3 =     98.176299336244 amps
+ Set NMR for Dipole =   -0.53457185232606 Tesla
+-1.6532
+  Field03 program
+ Set current for Q1 =     215.30465939886 amps
+ Set current for Q2 =    -171.10372456598 amps
+ Set current for Q3 =     83.515479165042 amps
+ Set NMR for Dipole =   -0.45439569451665 Tesla
+-1.4052
+  Field03 program
+ Set current for Q1 =     182.98593883124 amps
+ Set current for Q2 =    -145.39540888383 amps
+ Set current for Q3 =     71.051190240377 amps
+ Set NMR for Dipole =   -0.38623084317372 Tesla
+-1.1944
+  Field03 program
+ Set current for Q1 =     155.51502634876 amps
+ Set current for Q2 =    -123.54334055401 amps
+ Set current for Q3 =     60.456748540135 amps
+ Set NMR for Dipole =   -0.32829071953223 Tesla
+-1.0153
+  Field03 program
+ Set current for Q1 =     132.17517613239 amps
+ Set current for Q2 =   -104.977375478715 amps
+ Set current for Q3 =     51.455734709127 amps
+ Set NMR for Dipole =   -0.27906360309869 Tesla
+-.863
+  Field03 program
+ Set current for Q1 =     112.32783281606 amps
+ Set current for Q2 =    -89.189567098107 amps
+ Set current for Q3 =     43.801891570182 amps
+ Set NMR for Dipole =   -0.23720268834253 Tesla
+-.7335
+  Field03 program
+ Set current for Q1 =     95.451726713216 amps
+ Set current for Q2 =    -75.765265159244 amps
+ Set current for Q3 =     37.294201783887 amps
+ Set NMR for Dipole =   -0.20160854217757 Tesla
+-.6235
+  Field03 program
+ Set current for Q1 =     81.116810332417 amps
+ Set current for Q2 =    -64.362383203453 amps
+ Set current for Q3 =     31.766835568199 amps
+ Set NMR for Dipole =   -0.17137413230773 Tesla
+-.5300
+  Field03 program
+ Set current for Q1 =     68.932131408739 amps
+ Set current for Q2 =    -54.669933541031 amps
+ Set current for Q3 =     27.069050841821 amps
+ Set NMR for Dipole =   -0.14567488391836 Tesla
+-.4505
+  Field03 program
+ Set current for Q1 =     58.571896388071 amps
+ Set current for Q2 =    -46.428759763891 amps
+ Set current for Q3 =     23.075245304250 amps
+ Set NMR for Dipole =   -0.12382365133060 Tesla
