@@ -166,20 +166,20 @@ c For the Dipole calculate s start value for the set current
       I_D = 1105.7*B_D+13.192*B_D*B_D
 
 c Set the minimum on loop currents
-      if (I_Q1+200.gt.1000.) then 
-         MOL_Q1 = 999.
+      if (I_Q1+200.gt.940.) then 
+         MOL_Q1 = 940.
       else  
          MOL_Q1 = I_Q1+200.
       endif
 
-      if (I_Q2+200.gt.1000.) then 
-         MOL_Q2 = 999.                                                             
+      if (I_Q2+200.gt.910.) then 
+         MOL_Q2 = 910.                                                             
       else  
          MOL_Q2 = I_Q2+200. 
       endif
 
-      if (I_Q3+200.gt.600.) then 
-         MOL_Q3 = 599.                                                              
+      if (I_Q3+200.gt.690.) then 
+         MOL_Q3 = 690.                                                              
       else  
          MOL_Q3 = I_Q3+200.
       endif
@@ -203,18 +203,18 @@ c Tell the user what setting he wants.
 
 
 
-      if(iargcount.ge.1) then
-         print '(3(f9.3,","),f11.7)',I_Q1*sign_HMS*-1.,I_Q2*sign_HMS
-     $        ,I_Q3*sign_HMS*-1.,B_D *sign_HMS
-      else
-         write(*,*) ' Field03 program'
-         write(*,*)'Set current for Q1 = ',I_Q1*sign_HMS*-1.,' amps'
-         write(*,*)'Set current for Q2 = ',I_Q2*sign_HMS    ,' amps'
-         write(*,*)'Set current for Q3 = ',I_Q3*sign_HMS*-1.,' amps'
-         write(*,'(a,f12.9,a,a,f9.4,a)')
-     >' Set NMR for Dipole = ',B_D *sign_HMS,    ' Tesla'
-     >,'  (approximately ',I_D *sign_HMS,' Amps)'
-      endif
+C      if(iargcount.ge.1) then
+C         print '(3(f9.3,","),f11.7)',I_Q1*sign_HMS*-1.,I_Q2*sign_HMS
+C     $        ,I_Q3*sign_HMS*-1.,B_D *sign_HMS
+C      else
+C         write(*,*) ' Field03 program'
+C         write(*,*)'Set current for Q1 = ',I_Q1*sign_HMS*-1.,' amps'
+C         write(*,*)'Set current for Q2 = ',I_Q2*sign_HMS    ,' amps'
+C         write(*,*)'Set current for Q3 = ',I_Q3*sign_HMS*-1.,' amps'
+C         write(*,'(a,f12.9,a,a,f9.4,a)')
+C     >' Set NMR for Dipole = ',B_D *sign_HMS,    ' Tesla'
+C     >,'  (approximately ',I_D *sign_HMS,' Amps)'
+C      endif
 
 
       end
