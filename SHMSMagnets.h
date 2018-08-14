@@ -14,11 +14,11 @@ using namespace std;
 
 // version number per magnet:
 const int nmag = 5;
-int version_hb = 0;
-int version_q1 = 3;
-int version_q2 = 2;
-int version_q3 = 3;
-int version_dip = 0;
+int version_hb = 4;
+int version_q1 = 4;
+int version_q2 = 4;
+int version_q3 = 4;
+int version_dip = 4;
 
 const int version[nmag] = {version_hb, version_q1, version_q2, version_q3, version_dip};
 
@@ -32,27 +32,27 @@ double getVersion(int ii){
 
 //HB:
 double betaG_hb = 6.48514620500684636e-03; //units of [kG/A]
-double P0_hb = 0.00307690156; //units of [GeV/A]
+double P0_hb = 0.983*0.00307690156; //units of [GeV/A]
 double leffG_hb = 80.209; //units of [cm]
 
 //Q1:
 double betaG_q1 = 7.10342873019000065e-03; //units of [kG/A]
-double P0_q1 =  0.97*0.0049948; //units of [GeV/A]
+double P0_q1 =  0.983*0.97*0.0049948; //units of [GeV/A]
 double leffG_q1 = 1.863; //units of [m]
 
 //Q2:
 double betaG_q2 = 9.43647134013299999e-03; //units of [kG/A]
-double P0_q2 = 0.96*0.00300464; //units of [GeV/A]
+double P0_q2 = 0.983*0.96*0.00300464; //units of [GeV/A]
 double leffG_q2 = 1; //assume linear
 
 //Q3:
 double betaG_q3 = 9.72834595398900000e-03; //units of [kG/A]
-double P0_q3 = 0.97*0.004519309778; //units of [GeV/A]
+double P0_q3 = 0.983*0.97*0.004519309778; //units of [GeV/A]
 double leffG_q3 = 1; //assume linear
 
 //dipole:
 double betaG_dip = 1.18479459998974725e-02; //units of [kG/A]
-double P0_dip = 3.18840579710144957e-03; //units of [GeV/A]
+double P0_dip = 0.983*3.18840579710144957e-03; //units of [GeV/A]
 double leffG_dip = 1; //assume linear
 
 

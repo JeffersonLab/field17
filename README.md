@@ -52,6 +52,10 @@ Q1 at 1.03, Q2 at 1.04, Q3 at 1.03
 Version 3:
 Q1 and Q3 saturations removed
 
+Version 4:
+HB, Q1, Q2, Q3 and dipole scaled up by 1/0.983
+All version numbers should read 4.
+
 ## HMS Version notes:
 Version 1:
 Saturation correction at 5.3 GeV and above added to dipole model.
