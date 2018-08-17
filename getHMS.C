@@ -48,6 +48,12 @@ int main(int argc, char *argv[]){
   Biter = Biter*satFactor;
   I_iter = I_iter*satFactor;
 
+  double I_mol = I_iter+300.0;
+  if (I_mol < 1500.0){
+    I_mol = 1500.0;
+  }
+  
+
   cout<<"Magnet:\t"<<magnet<<"\tVersion:\t"<<getVersion()<<endl;
   cout<<"Set the HMS Dipole by NMR"<<endl;
     if (debug == 1){
@@ -60,10 +66,14 @@ int main(int argc, char *argv[]){
     if (P<0.01){
       cout<<"\tRecommended NMR B: "<<0.0<<" [T]"<<endl;
       cout<<"\tCorresponds to approx Iset: "<<0.0<<" [A]."<<endl;
+      cout<<"\tMOL current: "<<0.0<<" [T]"<<endl;
+
     }
     else{
       cout<<"\tRecommended NMR B: "<<Biter<<" [T]"<<endl;
       cout<<"\tCorresponds to approx Iset: "<<I_iter<<" [A]."<<endl;
+      cout<<"\tMOL current: "<<I_mol<<" [T]"<<endl;
+
     }
 
   return 0;
