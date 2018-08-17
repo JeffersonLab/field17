@@ -54,7 +54,11 @@ Q1 and Q3 saturations removed
 
 Version 4:
 HB, Q1, Q2, Q3 and dipole scaled up by 1/0.983
-All version numbers should read 4.
+
+Version 5:
+SHMS dipole 0.1% sat above 6 GeV removed. 
+All version numbers should read 5.
+
 
 ## HMS Version notes:
 Version 1:

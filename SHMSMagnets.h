@@ -14,11 +14,11 @@ using namespace std;
 
 // version number per magnet:
 const int nmag = 5;
-int version_hb = 4;
-int version_q1 = 4;
-int version_q2 = 4;
-int version_q3 = 4;
-int version_dip = 4;
+int version_hb = 5;
+int version_q1 = 5;
+int version_q2 = 5;
+int version_q3 = 5;
+int version_dip = 5;
 
 const int version[nmag] = {version_hb, version_q1, version_q2, version_q3, version_dip};
 
@@ -254,7 +254,7 @@ double calcLinearDip(double P){
 // input units [A], output units [unitless]
 double calcBetaRatioDip(double I_iter){
 
-  double beta = (-9.72072E-25*pow(I_iter,6) + 9.79429E-21*pow(I_iter,5) - 3.80396E-17*pow(I_iter,4) + 7.02145E-14*pow(I_iter,3) - 5.80238E-11*pow(I_iter,2) + 1.88857E-9*I_iter + 0.0118584);
+  double beta = betaG[4];//(-9.72072E-25*pow(I_iter,6) + 9.79429E-21*pow(I_iter,5) - 3.80396E-17*pow(I_iter,4) + 7.02145E-14*pow(I_iter,3) - 5.80238E-11*pow(I_iter,2) + 1.88857E-9*I_iter + 0.0118584);
 
   return beta/betaG[4];
 }
