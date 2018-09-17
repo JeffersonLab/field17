@@ -185,21 +185,45 @@ c Set the minimum on loop currents
       endif
 
 c Tell the user what setting he wants.
-      print*, '-----------------------------------------------------'
-      print*, 'If increasing momentum, go to Minimum On Loop (MOL) '
-      print*, 'current first, then to Iset.'
-      print*,'Magnet: Q1'
-      print*, '     Iset: ',I_Q1,' [A]. MOL current: '
+      if(p_HMS > 0.005) then
+         print*, '-----------------------------------------------------'
+         print*, 'If increasing momentum, go to Minimum On Loop (MOL) '
+         print*, 'current first, then to Iset.'
+         print*,'Magnet: Q1'
+         print*, '     Iset: ',I_Q1,' [A]. MOL current: '
      $     ,MOL_Q1,' [A].'
-      print*, ''
-      print*,'Magnet: Q2'                                                                                   
-      print*, '     Iset: ',I_Q2,' [A]. MOL current: '                                           
-     $     ,MOL_Q2,' [A].'                                                                        
-      print*, ''
-      print*,'Magnet: Q3'                                                                                    
-      print*, '     Iset: ',I_Q3,' [A]. MOL current: '                                          
-     $     ,MOL_Q3,' [A].'                                                                      
-      print*, '----------------------------------------------------'
+         print*, ''
+         print*,'Magnet: Q2'
+     $        
+         print*, '     Iset: ',I_Q2,' [A]. MOL current: ',MOL_Q2,' [A].'
+     $        
+         print*, ''
+         print*,'Magnet: Q3'
+     $        
+         print*, '     Iset: ',I_Q3,' [A]. MOL current: ',MOL_Q3,' [A].'
+     $        
+         print*, '----------------------------------------------------'
+      else
+         print*, '-----------------------------------------------------'
+         print*, 'If increasing momentum, go to Minimum On Loop (MOL) '
+         print*, 'current first, then to Iset.'
+         print*,'Magnet: Q1'
+         print*, '     Iset: 0.0 [A]. MOL current: 0.0 [A].'
+         print*, ''
+         print*,'Magnet: Q2'
+     $        
+         print*, '     Iset: 0.0 [A]. MOL current: 0.0 [A].'
+     $        
+         print*, ''
+         print*,'Magnet: Q3'
+     $        
+         print*, '     Iset: 0.0 [A]. MOL current: 0.0 [A].'
+     $        
+         print*, '----------------------------------------------------'
+
+
+
+      endif 
 
 
 

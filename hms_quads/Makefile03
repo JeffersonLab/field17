@@ -7,7 +7,7 @@
 
 OBJ = field03.o params03.o
 
-FC = f77
+FC = gfortran
 
 FFLAGS = 
 
