@@ -41,8 +41,12 @@ int main(int argc, char *argv[]){
 
   //includes results from Mark's saturation study
   double satFactor = 1.0;
+  /*
   if (P>=5.3){
     satFactor = 0.01*P+0.948;
+    }*/
+  if (P>=5.1){//changed to this on 26Aug18, conservative
+    satFactor = 0.01*P+0.949;
   }
 
   Biter = Biter*satFactor;
