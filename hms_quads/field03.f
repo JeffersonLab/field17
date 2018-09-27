@@ -166,8 +166,8 @@ c For the Dipole calculate s start value for the set current
       I_D = 1105.7*B_D+13.192*B_D*B_D
 
 c Set the minimum on loop currents
-      if (I_Q1+200.gt.940.) then 
-         MOL_Q1 = 940.
+      if (I_Q1+200.gt.930.) then 
+         MOL_Q1 = 930.
       else  
          MOL_Q1 = I_Q1+200.
       endif
@@ -178,8 +178,8 @@ c Set the minimum on loop currents
          MOL_Q2 = I_Q2+200. 
       endif
 
-      if (I_Q3+200.gt.690.) then 
-         MOL_Q3 = 690.                                                              
+      if (I_Q3+200.gt.475.) then 
+         MOL_Q3 = 475.                                                              
       else  
          MOL_Q3 = I_Q3+200.
       endif
