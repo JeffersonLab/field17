@@ -25,6 +25,17 @@ int main(int argc, char *argv[]){
 
   char const *magnet = "HMS_Dipole";
   
+  double satFactor = 1.0;
+  //includes results from Mark's saturation study
+  /*
+    if (P>=5.3){
+    satFactor = 0.01*P+0.948;
+    }*/
+
+  if (P>=5.1){//changed to this on 26Aug18, conservative
+    satFactor = 0.01*P+0.949;
+  }
+
   while (fabs(eta)>tol){
       eta = calcPratioDip(P, I_iter);
 
@@ -32,25 +43,12 @@ int main(int argc, char *argv[]){
       else {I_iter = I_iter*(1+fabs(eta)/2.0);}
 
       lratio = calcLeffRatioDip(I_iter);
-      bratio = calcBetaRatioDip(I_iter)*betaG;
+      bratio = calcBetaRatioDip(I_iter)*betaG*satFactor;
       Biter = (lratio * bratio * I_iter)/10.0;
 
       ii++;
       if (ii > 100) {break;}
     }
-
-  //includes results from Mark's saturation study
-  double satFactor = 1.0;
-  /*
-  if (P>=5.3){
-    satFactor = 0.01*P+0.948;
-    }*/
-  if (P>=5.1){//changed to this on 26Aug18, conservative
-    satFactor = 0.01*P+0.949;
-  }
-
-  Biter = Biter*satFactor;
-  I_iter = I_iter*satFactor;
 
   double I_mol = I_iter+300.0;
   if (I_mol < 1500.0){
