@@ -13,12 +13,12 @@ using namespace std;
  ***************************************************/
 
 // version number per magnet:
-const int nmag = 5;
-int version_hb = 5;
-int version_q1 = 5;
-int version_q2 = 5;
-int version_q3 = 5;
-int version_dip = 5;
+const int nmag = 6;
+int version_hb = 6;
+int version_q1 = 6;
+int version_q2 = 6;
+int version_q3 = 6;
+int version_dip = 6;
 
 const int version[nmag] = {version_hb, version_q1, version_q2, version_q3, version_dip};
 
@@ -134,6 +134,9 @@ double calcLeffRatioQ1(double I_iter){
 
 // input units [GeV], [A], output units [unitless]
 double calcPratioQ1(double P, double I_iter){
+  //Q1 saturation above 6 GeV. Not yet studied past 8.035--HS, 28Sep18
+  if (fabs(P)>6.0&&fabs(P)<8.0){I_iter = I_iter/(-0.00077*pow(P,2.0)+0.0132*fabs(P)+0.94938);}
+  else if (fabs(P)>=8.0035){I_iter = I_iter/(-0.00077*pow(8.035,2.0)+0.0132*fabs(8.035)+0.94938);}
 
   double I_linear = calcLinearQ1(P);
 
