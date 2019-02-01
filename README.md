@@ -59,7 +59,13 @@ Version 5:
 SHMS dipole 0.1% sat above 6 GeV removed. 
 All version numbers should read 5.
 
+Version 6:
+Q1 saturation model applied between 6 - 8.035 GeV
+
 
 ## HMS Version notes:
 Version 1:
-Saturation correction at 5.3 GeV and above added to dipole model.
+Saturation correction at 5.3 GeV and above (0.01P + 0.948) added to dipole model.
+
+Version 2:
+Saturation correction at 5.1 GeV and above (0.01P + 0.949) added to the dipole model (previous correction in Version 1 removed).

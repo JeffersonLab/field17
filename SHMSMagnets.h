@@ -119,6 +119,7 @@ double calcLinearQ1(double P){
 // input units [A], output units [unitless]
 double calcBetaRatioQ1(double I_iter){
 
+  //beta fit from data not used--Apr 2018 HSV
   double beta = betaG[1];//(2.24863E-23*pow(I_iter,6) - 1.56067E-19*pow(I_iter,5) + 3.72383E-16*pow(I_iter,4) - 4.12478E-13*pow(I_iter,3) + 2.29043E-10*pow(I_iter,2) - 6.2683E-08*I_iter + 0.00711028);
 
   return beta/betaG[1];
@@ -127,6 +128,7 @@ double calcBetaRatioQ1(double I_iter){
 // input units [A], output units [unitless]
 double calcLeffRatioQ1(double I_iter){
 
+  //leff fit from data not used--Apr 2018 HSV
   double leff = leffG[1];//leffG[1]* (1 + (I_iter>1220)*(4.60576E-12*pow(I_iter-1220,3)-1.00781E-8*pow(I_iter-1220,2)+7.17211E-7*(I_iter-1220)));
 
   return leff/leffG[1];
@@ -134,8 +136,9 @@ double calcLeffRatioQ1(double I_iter){
 
 // input units [GeV], [A], output units [unitless]
 double calcPratioQ1(double P, double I_iter){
+  
   //Q1 saturation above 6 GeV. Not yet studied past 8.035--HS, 28Sep18
-  if (fabs(P)>6.0&&fabs(P)<8.0){I_iter = I_iter/(-0.00077*pow(P,2.0)+0.0132*fabs(P)+0.94938);}
+  if (fabs(P)>6.0&&fabs(P)<8.0035){I_iter = I_iter/(-0.00077*pow(P,2.0)+0.0132*fabs(P)+0.94938);}
   else if (fabs(P)>=8.0035){I_iter = I_iter/(-0.00077*pow(8.035,2.0)+0.0132*fabs(8.035)+0.94938);}
 
   double I_linear = calcLinearQ1(P);
@@ -167,6 +170,7 @@ double calcLinearQ2(double P){
 // input units [A], output units [unitless]
 double calcBetaRatioQ2(double I_iter){
 
+  //fit function not applied in data --Oct 2017 HSV
   //double beta = (-4.2749E-19*pow(I_iter,4) + 4.46166E-15*pow(I_iter,3) - 1.26893E-11*pow(I_iter,2) - 1.80224E-9*I_iter + 0.00944297);
   double beta = betaG[2];
 
@@ -213,6 +217,7 @@ double calcLinearQ3(double P){
 // input units [A], output units [unitless]
 double calcBetaRatioQ3(double I_iter){
 
+  //fit function removed from data -- Apr 2018 HSV
   double beta = betaG[3];//(5.57412E-24*pow(I_iter,6) - 4.57913E-20*pow(I_iter,5) + 1.34093E-16*pow(I_iter,4) - 1.5001E-13*pow(I_iter,3) + 1.28572E-12*pow(I_iter,2) + 2.34223E-12*I_iter + 0.00973899);
 
   return beta/betaG[3];
@@ -257,6 +262,8 @@ double calcLinearDip(double P){
 // input units [A], output units [unitless]
 double calcBetaRatioDip(double I_iter){
 
+
+  //fit function removed from data -- August 2018 HSV
   double beta = betaG[4];//(-9.72072E-25*pow(I_iter,6) + 9.79429E-21*pow(I_iter,5) - 3.80396E-17*pow(I_iter,4) + 7.02145E-14*pow(I_iter,3) - 5.80238E-11*pow(I_iter,2) + 1.88857E-9*I_iter + 0.0118584);
 
   return beta/betaG[4];
