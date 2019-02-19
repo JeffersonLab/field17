@@ -172,8 +172,9 @@ c Set the minimum on loop currents
          MOL_Q1 = I_Q1+200.
       endif
 
-      if (I_Q2+200.gt.910.) then 
-         MOL_Q2 = 910.                                                             
+      if (I_Q2+200.gt.610.) then 
+         MOL_Q2 = 610. 
+c 910A is old, changed to 610A 19Feb19 --HS                                                             
       else  
          MOL_Q2 = I_Q2+200. 
       endif
@@ -207,12 +208,13 @@ c Tell the user what setting he wants.
          print*, '-----------------------------------------------------'
          print*, 'If increasing momentum, go to Minimum On Loop (MOL) '
          print*, 'current first, then to Iset.'
+         print*, 'Once Q2 reaches 10A, Power Off the magnet.'
          print*,'Magnet: Q1'
          print*, '     Iset: 0.0 [A]. MOL current: 0.0 [A].'
          print*, ''
          print*,'Magnet: Q2'
      $        
-         print*, '     Iset: 0.0 [A]. MOL current: 0.0 [A].'
+         print*, '     Iset: 10.0 [A]. MOL current: 10.0 [A].'
      $        
          print*, ''
          print*,'Magnet: Q3'
