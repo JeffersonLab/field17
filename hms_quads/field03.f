@@ -172,8 +172,8 @@ c Set the minimum on loop currents
          MOL_Q1 = I_Q1+200.
       endif
 
-      if (I_Q2+200.gt.610.) then 
-         MOL_Q2 = 610. 
+      if (I_Q2+200.gt.600.) then 
+         MOL_Q2 = 600. 
 c 910A is old, changed to 610A 19Feb19 --HS                                                             
       else  
          MOL_Q2 = I_Q2+200. 
